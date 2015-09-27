@@ -11,14 +11,14 @@
 
 ## makeCacheMatrix is a function that contains and addresses different functions
 ## dealing with the task of calculating and storing of an inverse of a matrix x.
-## The functions are stored in variables (set, get, setinv, getinv) so it can be
-## called e.g. by the function cacheSolve.
+## The functions stored in makeCacheMatrix (set, get, setinv, getinv) can also
+## be called by other functions e.g. cacheSolve.
 
-## The variable "set" is used to input a new matrix.
-## The variable "get" returns the latest matrix stored in "set".
-## The variable "setinv" stores the inverse of a matrix (or potentially any other
+## The function "set" is used to input a new matrix.
+## The function "get" returns the latest matrix stored in "set".
+## The function "setinv" stores the inverse of a matrix (or potentially any other
 ## values)
-## The variable "getinv" returns the values stored in the setinv variable
+## The function "getinv" returns the values stored by "setinv".
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
@@ -40,7 +40,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## If the inverse i of the matrix x were already calculated and is stored in the 
 ## cache, the function returns the message "getting cached data" followed by i.
 ## Otherwise it calculates the inverse i, stores the solution and returns i.
-## To store the inverse it calls the variable "setinv" within makeCacheMatrix.
+## To store the inverse it calls the function "setinv" within makeCacheMatrix.
 
 
 cacheSolve <- function(x, ...) {
